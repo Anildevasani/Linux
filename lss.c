@@ -1,3 +1,5 @@
+Write a C program to emulate the Unix ls-l command.
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
