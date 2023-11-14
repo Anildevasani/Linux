@@ -1,4 +1,4 @@
-#C program to demonstrate zombie process
+C program to demonstrate zombie process
 
 
 #include <stdlib.h>
