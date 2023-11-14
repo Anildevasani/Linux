@@ -1,4 +1,4 @@
-# Write a C Program that demonstrates redirection of standard output to a file .EX: ls > f1.
+ Write a C Program that demonstrates redirection of standard output to a file .EX: ls > f1.
 
 #include<stdlib.h>
 #include<stdio.h>
