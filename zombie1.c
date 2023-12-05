@@ -1,6 +1,3 @@
-C program to demonstrate zombie process
-
-
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
