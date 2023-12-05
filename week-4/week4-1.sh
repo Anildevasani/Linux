@@ -1,3 +1,5 @@
+Write a shell script that accept a list of file names as arguments count and report the occurrence of each word.
+
 #!/bin/bash
 
 # Loop through all arguments (filenames)
