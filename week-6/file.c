@@ -1,3 +1,5 @@
+Write a C program to list for every file in a directory, itsinode number and fill name.
+
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
