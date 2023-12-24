@@ -1,4 +1,4 @@
-
+# write a c program that illustrates how an orphan is created
 
 #include<stdio.h>
 #include<unistd.h>
