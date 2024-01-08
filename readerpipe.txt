@@ -1,0 +1,36 @@
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int main() {
+    const char *fifoPath = "/tmp/myfifo";
+
+    // Open the named pipe for reading
+    int fd = open(fifoPath, O_RDONLY);
+    if (fd == -1) {
+        perror("open");
+        exit(EXIT_FAILURE);
+    }
+
+    // Read data from the named pipe
+    char buffer[100];
+    ssize_t bytesRead = read(fd, buffer, sizeof(buffer));
+
+    if (bytesRead == -1) {
+        perror("read");
+        exit(EXIT_FAILURE);
+    }
+
+    // Null-terminate the received data
+    buffer[bytesRead] = '\0';
+
+    // Display the received data
+    printf("Received: %s\n", buffer);
+
+    // Close the file descriptor
+    close(fd);
+
+    return 0;
+}
