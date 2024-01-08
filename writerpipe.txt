@@ -1,0 +1,29 @@
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int main() {
+    const char *fifoPath = "/tmp/myfifo";
+
+    // Create a named pipe (FIFO)
+    mkfifo(fifoPath, 0666);
+
+    // Open the named pipe for writing
+    int fd = open(fifoPath, O_WRONLY);
+    if (fd == -1) {
+        perror("open");
+        exit(EXIT_FAILURE);
+    }
+
+    // Write data to the named pipe
+    const char *message = "Hello, named pipe!";
+    write(fd, message, strlen(message));
+
+    // Close the file descriptor
+    close(fd);
+
+    return 0;
+}
